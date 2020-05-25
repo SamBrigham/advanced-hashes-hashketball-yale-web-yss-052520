@@ -197,7 +197,7 @@ def most_points_scored
   mp = 0
   game_hash.each do |home_away, team_data|
    team_data[:players].each do |player|
-     points = player[]
+     pointnum = player[:points]
      
      
      
