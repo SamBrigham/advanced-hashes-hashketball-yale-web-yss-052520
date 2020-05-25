@@ -199,7 +199,7 @@ def most_points_scored
    team_data[:players].each do |player|
      pointnum = player[:points]
      if pointnum > mp
-       return pointnum
+       pointnum
      end
    end
  end
