@@ -184,29 +184,4 @@ def big_shoe_rebounds
       shoe_size = player[:shoe] #sets shoe size to the value of each player elements show sieze
       if shoe_size > biggest_shoe
         biggest_shoe = shoe_size
-        most_rebounds = player[:rebounds] #loops through player to find the 
-        # biggest shoe size and the player with it, then assigns
-        #most rebounds to to rebound key value of player found to have largest shoe size
-      end
-    end
-  end
-  most_rebounds
-end
-
-def most_points_scored
-  mp = 0
-  game_hash.each do |home_away, team_data|
-   team_data[:players].each do |player|
-     pointnum = player[:points]
-     if pointnum > mp
-       pointnum
-     end
-   end
- end
-end     
-     
-     
-      
-      
-      
-      
+        most_rebounds = player[:rebounds] #loops through player to3
