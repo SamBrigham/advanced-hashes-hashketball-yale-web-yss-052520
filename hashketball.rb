@@ -128,9 +128,9 @@ def game_hash
 end
 
 def num_points_scored(player_name)
-  game_hash.each do |home_away, team_data|
-  team_data[:players].each do |player|
-    return player[:points] if player[:player_name] == player_name
+  game_hash.each do |home_away, team_data| #accesses home and away umbrella hash, and then embedded team information hashes
+  team_data[:players].each do |player| #accesses each hash of individual player statistics
+    return player[:points] if player[:player_name] == player_name #returns value within key if input value matches corresponding key
   
  end
 end
@@ -146,12 +146,12 @@ end
 
 def team_colors(team_name)
   game_hash.each do |home_away, team_data|
-    return team_data[:colors] if team_data[:team_name] == team_name
+    return team_data[:colors] if team_data[:team_name] == team_name #returns the colors if value of individual team characteristics hash matches input
   end
 end
 
 def team_names
-    game_hash.map do |home_away, team_data|
+    game_hash.map do |home_away, team_data| #maps the outer hash of team characteristics to return a new array of the values within :team_name keys
       team_data[:team_name]
 end    
 end
@@ -162,14 +162,14 @@ def player_numbers(team_name)
      return team_data[:players].map do |player|
        player[:number]
   end
-end
+end #if the team_data team characteristic hash's name key matches the input, it maps individual player data to a new array containing players' numbers
 end
 end
 
 def player_stats(player_name)
   game_hash.each do |home_away, team_data|
-    team_data[:players].each do |player|
-      if player[:player_name] == player_name
+    team_data[:players].each do |player| #accesses all the individual statistictics for each player
+      if player[:player_name] == player_name #if player_name key equals input, it returns all the elements/statistics for each player
         return player
     end
   end
@@ -178,13 +178,15 @@ end
 
 def big_shoe_rebounds
   biggest_shoe = 0
-  most_rebounds = 0
+  most_rebounds = 0 #set baseline minimum values for shoes and rebounds
   game_hash.each do |home_away, team_data|
     team_data[:players].each do |player|
-      shoe_size = player[:shoe]
+      shoe_size = player[:shoe] #sets shoe size to the value of each player elements show sieze
       if shoe_size > biggest_shoe
         biggest_shoe = shoe_size
-        most_rebounds = player[:rebounds]
+        most_rebounds = player[:rebounds] #loops through player to find the 
+        # biggest shoe size and the player with it, then assigns
+        #most rebounds to to rebound key value of player found to have largest shoe size
       end
     end
   end
