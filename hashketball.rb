@@ -198,6 +198,11 @@ def most_points_scored
   game_hash.each do |home_away, team_data|
    team_data[:players].each do |player|
      pointnum = player[:points]
+     if pointnum > mp
+       return pointnum
+     end
+   end
+ end
      
      
      
