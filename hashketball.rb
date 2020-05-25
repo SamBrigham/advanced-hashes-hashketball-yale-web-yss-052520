@@ -208,7 +208,7 @@ end
 
 def winning_team
   count = 0
-  while count > game_hash[:home][]
+  while count > game_hash[:home][:players].length
   count += 1
      
      
