@@ -195,7 +195,8 @@ end
 
 def most_points_scored
   game_hash.each do |home_away|
-    home_away[:players].each do 
+  team_data[L]
+      
       
       
       
