@@ -220,7 +220,12 @@ def player_with_longest_name
   game_hash.each do |home_away, team_data|
    team_data[:players].map do |player|
      name_length = player[:player_name].split("")
-     if name
+     if name_length > name_long
+       name_length = name_long
+     end
+   end
+   name_long
+ end
      
       
       
