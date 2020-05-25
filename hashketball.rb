@@ -208,7 +208,10 @@ end
 
 def winning_team
   count = 0
-  while count > game_hash[:home][:players].length
+  game_hash.each do |home_away, team_data|
+   team_data[:players].each do |player|
+     pointind = player[:points]
+  while count < game_hash[:home][:players].length
   count += 1
      
      
