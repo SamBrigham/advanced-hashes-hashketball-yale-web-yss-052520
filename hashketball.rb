@@ -205,6 +205,11 @@ def most_points_scored
  end
  pointnum
 end     
+
+def winning_team
+  count = 0
+  while count > game_hash[:home][]
+  count += 1
      
      
       
