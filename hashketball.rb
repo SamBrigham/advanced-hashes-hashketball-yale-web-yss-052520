@@ -194,8 +194,11 @@ def big_shoe_rebounds
 end
 
 def most_points_scored
+  mp = 0
   game_hash.each do |home_away|
-  team_data[L]
+   team_data[:players].each do |player|
+     
+     
       
       
       
