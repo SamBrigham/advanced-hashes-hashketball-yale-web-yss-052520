@@ -216,7 +216,9 @@ def winning_team
   count += 1
      
 def player_with_longest_name
-  g
+  game_hash.each do |home_away, team_data|
+   team_data[:players].map do |player|
+     splitplayer[:player_name]
      
       
       
